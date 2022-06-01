@@ -1,0 +1,48 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #171a21;
+}
+
+h1 {
+  color: #c7d5e0
+}
+
+.proyecto {
+  display: grid;
+}
+
+article a {
+  text-align: right;
+}
+
+.navbar {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+  display: grid;
+  background: #2a475e;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.navitem {
+  text-decoration: none;  
+  color: #c7d5e0;
+}
+
+.perfil {
+  border-radius:  50%;
+  max-width: 35%;
+  height: auto;
+}
+
+aside {
+  display: grid;
+  color: #c7d5e0;
+  justify-items: center;
+  width: 250px;
+  margin: auto;
+}

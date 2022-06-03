@@ -8,24 +8,44 @@ html, body {
   background: #171a21;
 }
 
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.box-header {
+  width: 100%;
+  padding: 30px 20px;
+}
+
+.box-navbar {
+  width: 100%;
+  padding: 10px;
+}
+
+.box-main {
+  width: 65%;
+  margin: 0%;
+  padding: 25px 30px;
+}
+
+.box-sidebar {
+  width: 31%;
+  padding: 25px 0px;
+}
+
 h1 {
   color: #c7d5e0
 }
 
-.proyecto {
-  display: grid;
-}
-
-article a {
-  text-align: right;
-}
-
 .navbar {
-  margin: 10px 0px 10px 0px;
-  padding: 10px;
-  display: grid;
+  display: flex; 
+  flex-wrap: wrap;
+  column-gap: 10px;
+  align-items: left;
   background: #2a475e;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .navitem {
@@ -33,16 +53,61 @@ article a {
   color: #c7d5e0;
 }
 
-.perfil {
+aside {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  width: 250px;
+  color: #c7d5e0;
+}
+
+aside img {
+  display: block;
   border-radius:  50%;
   max-width: 35%;
   height: auto;
 }
 
-aside {
-  display: grid;
-  color: #c7d5e0;
-  justify-items: center;
-  width: 250px;
-  margin: auto;
+aside div {
+  background-color: #1B2838;
+  width: 60%;
+}
+
+
+
+
+/* Page specific */
+
+article {
+  width: auto;
+  padding: 0 auto;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+article a {
+  display: block;
+  width: 100%;
+  padding: 5px 0px;
+  background: #66C0F4;
+  text-align: right;
+  text-decoration: none;  
+  color: #FFFFFF;
+}
+
+article img {
+  display: block;
+  width: 300px;
+  aspect-ratio: 1 / 1;
+}
+
+.div-proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  background: #1B2838;
 }

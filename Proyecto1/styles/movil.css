@@ -1,0 +1,20 @@
+@media only screen and (max-width: 412px) {
+  body {
+    flex-direction: row;
+  }
+
+  .box-main {
+    width: 100%;
+    margin: 0;
+    padding: 1.8em 2em;
+  }
+
+  .box-sidebar {
+    width: 100%;
+    padding: 1.8em 0em;
+  }
+  
+  .div-proyectos {
+    flex-direction: row;
+  }
+}

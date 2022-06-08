@@ -59,6 +59,10 @@ h1 {
   color: #c7d5e0;
 }
 
+.navitem:hover {
+  color: #112b40;
+}
+
 aside {
   display: flex;
   flex-wrap: wrap;

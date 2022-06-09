@@ -23,41 +23,4 @@
     display: block;
     position: fixed;
   }
-  
-  .div-proyectos {
-    flex-direction: row;
-  }
-
-  article {
-    display: flex;
-    width: 100%;
-    padding: 0 auto;
-    border-radius: 0.6em;
-    margin: 0.3em;
-  }
-
-  article a {
-    display: block;
-    width: 25%;
-    padding: 0.3em 0.3em;
-    background: #66C0F4;
-    text-align: right;
-    text-decoration: none;  
-    color: #FFFFFF;
-  }
-  
-  article img {
-    display: block;
-    width: 14em;
-    aspect-ratio: 16 / 5;
-  }
-  
-  .div-proyectos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 0.5em;
-    background: #1B2838;
-  }
 }

@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Portafolio Personal</title>
   <link href="/styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="/styles/sobremi.css" rel="stylesheet" type="text/css" />
   <link href="/styles/proyectos.css" rel="stylesheet" type="text/css" />
+  <link href="/styles/habilidades.css" rel="stylesheet" type="text/css" />
+  <link href="/styles/pasatiempos.css" rel="stylesheet" type="text/css" />
+  <link href="/styles/comentarios.css" rel="stylesheet" type="text/css" />
   <link href="/styles/movil.css" rel="stylesheet" type="text/css" />
   <link href="/styles/movilproyectos.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,65 +19,260 @@
 </head>
 
 <body>
-
   <header class="box-header">
     <h1>Portafolio Personal</h1>
   </header>
 
-  <nav class="navbar box-navbar">
-      <a class="navitem" href="/index.html">Proyectos</a>
-      <a class="navitem" href="/habilidades.html">Habilidades</a>
-      <a class="navitem" href="/comentarios.html">Comentarios</a>
-      <a class="navitem" href="/pasatiempos.html">Pasatiempos</a>
+  <nav id="navbar" class="navbar box-navbar">
+      <a class="navitem" href="#inicio">Home</a>
+      <a class="navitem" href="#proyectos">Proyectos</a>
+      <a class="navitem" href="#habilidades">Habilidades</a>
+      <a class="navitem" href="#pasatiempos">Pasatiempos</a>
+      <a class="navitem" href="#comentarios">Comentarios</a>
   </nav>
 
-  <div class="div-proyectos box-main">
+  <div class="div-content">
 
-    <section>
-      <article>
-        <img src="/images/placeholder.png" alt="Proyecto">
-        <a href="">Ver mas</a>
-      </article>
-    </section>
+      <!-- 
+    =========================================
+    SOBRE MI 
+    =========================================
+    -->
 
-    <section>
-      <article>
-        <img src="/images/placeholder.png" alt="Proyecto">
-        <a href="">Ver mas</a>
-      </article>
-    </section>
+    <div id="inicio" class="div-sobremi box-main">
 
-    <section>
-      <article>
-        <img src="/images/placeholder.png" alt="Proyecto">
-        <a href="">Ver mas</a>
-      </article>
-    </section>
+      <h2> Quien soy ? </h2>
 
-    <section>
-      <article>
-        <img src="/images/placeholder.png" alt="Proyecto">
-        <a href="">Ver mas</a>
-      </article>
-    </section>
+      <div class="img-block">
+        <img src="/images/placeholder.png" alt="Foto de presentacion">
+      </div>
+
+      <div class="sobremi-content">
+
+        <div class="descripcion">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed.</p>
+        </div>
+  
+        <div class="lista">
+          <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Milk</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+  
+        <div class="lista">
+          <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Milk</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+  
+        <div class="descripcion">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 
+    =========================================
+    PROYECTOS 
+    =========================================
+    -->
+
+    <div id="proyectos" class="div-proyectos box-main">
+
+      <h3>Proyectos</h3>
+
+      <section>
+        <article>
+          <img src="/images/placeholder.png" alt="Proyecto">
+          <a href="">Ver mas</a>
+        </article>
+      </section>
+
+      <section>
+        <article>
+          <img src="/images/placeholder.png" alt="Proyecto">
+          <a href="">Ver mas</a>
+        </article>
+      </section>
+
+      <section>
+        <article>
+          <img src="/images/placeholder.png" alt="Proyecto">
+          <a href="">Ver mas</a>
+        </article>
+      </section>
+
+      <section>
+        <article>
+          <img src="/images/placeholder.png" alt="Proyecto">
+          <a href="">Ver mas</a>
+        </article>
+      </section>
+
+    </div>
+
+    <!-- 
+    =========================================
+    HABILIDADES 
+    =========================================
+    -->
+
+    <div id="habilidades" class="div-habilidades box-main">
+
+      <h3>Habilidades</h3>
+
+      <div class="habilidad">
+        <div class="habilidad-img">
+          <img src="images/comunicacion.svg">
+        </div>
+
+        <p>
+          Habilidad 1
+        </p>
+
+        <div class="habilidad-barra">
+          <div class="half-bar">
+            <p> 50% </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="habilidad">
+        <div class="habilidad-img">
+          <img src="images/comunicacion.svg">
+        </div>
+
+        <p>
+          Habilidad 2
+        </p>
+
+        <div class="habilidad-barra">
+          <div class="almostfull-bar">
+            <p> 75% </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="habilidad">
+        <div class="habilidad-img">
+          <img src="images/comunicacion.svg">
+        </div>
+
+        <p>
+          Habilidad 3
+        </p>
+
+        <div class="habilidad-barra">
+          <div class="half-bar">
+            <p> 50% </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="habilidad">
+        <div class="habilidad-img">
+          <img src="images/comunicacion.svg">
+        </div>
+
+        <p>
+          Habilidad 4
+        </p>
+
+        <div class="habilidad-barra">
+          <div class="full-bar">
+            <p> 100% </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 
+    =========================================
+    PASATIEMPOS 
+    =========================================
+    -->
+
+
+
+
+
+
+
+
+
+    <!-- 
+    =========================================
+    COMENTARIOS 
+    =========================================
+    -->
+
+    <div id="comentarios" class="div-comentarios box-main">
+
+    <h3>Comentarios</h3>
+
+        <div class="comentario">
+          <h4> User 1 - 26/05/2022 </h4>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed pulvinar ligula, quis ornare justo. 
+            Duis non sollicitudin odio. Proin mattis ipsum hendrerit diam volutpat, id ullamcorper erat sollicitudin. 
+            Phasellus nec purus sollicitudin lectus lobortis sodales. Etiam sit amet felis in quam varius euismod. 
+            Donec in ultrices enim. </p>
+        </div>
+    
+        <div class="comentario">
+          <h4> User 2 - 26/05/2022 </h4>
+          <p> LVestibulum sit amet lobortis ante. 
+            Aliquam blandit ante ut auctor semper. Aliquam quis finibus nunc. 
+            Nulla id velit laoreet, cursus urna a, euismod velit. 
+            Sed non porttitor tortor, eu tincidunt ligula. </p>
+        </div>
+
+        <div class="div-formulario">
+      
+          <form action="">
+            <input type="text" id="name" name="name" value="Nombre"><br>
+            <textarea name="message" rows="10" cols="30">Comentario</textarea><br>
+            <input type="submit" value="Enviar Comentario">
+          </form>
+
+        </div>
+
+    </div>
 
   </div>
 
-  <aside class="box-sidebar">
-    <img src="/images/placeholder.png" alt="Foto de presentacion">
-    <h3>Oscar Garcia</h3>
-    <div>
-      <span>Email</span>
-      <span>##########</span>
-    </div>
-    <div>
-      <span>Telefono</span>
-      <span>##########</span>
-    </div>
-    <div>
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, sit amet ultricies est sagittis sed.</span>
-    </div>
-  </aside>
+  <script>
+
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    </script>
 
 </body>
 

@@ -29,3 +29,8 @@ article img {
   gap: 2.5em;
   background: #1B2838;
 }
+
+.div-proyectos h3 {
+  width: 100%;
+  color: #FFFFFF;
+}

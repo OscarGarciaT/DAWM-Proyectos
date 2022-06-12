@@ -9,16 +9,10 @@
 }
 
 html, body {
+  margin: 0%;
   height: 100%;
   width: 100%;
   background: #171a21;
-}
-
-body {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .box-header {
@@ -31,8 +25,15 @@ body {
   padding: 0.5em;
 }
 
+.div-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .box-main {
-  width: 65%;
+  width: 100%;
   margin: 0%;
   padding: 1.8em 2em;
 }
@@ -54,6 +55,16 @@ h1 {
   background: #2a475e;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .div-content {
+  padding-top: 60px;
+}
+
 .navitem {
   text-decoration: none;  
   color: #c7d5e0;
@@ -64,7 +75,7 @@ h1 {
 }
 
 aside {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   flex-direction: column;
   row-gap: 0.7em;
@@ -83,9 +94,5 @@ aside img {
 aside div {
   background-color: #1B2838;
   width: 60%;
-}
-
-.aside-mov {
-  
 }
 

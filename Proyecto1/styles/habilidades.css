@@ -1,0 +1,60 @@
+.div-habilidades {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2.5em;
+    background: #1B2838;
+}
+
+.div-habilidades h3 {
+    width: 100%;
+    color: #FFFFFF;
+  }
+
+.habilidad {
+    display: flex;
+    width: 80%;
+    background: #2A475E;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3%;
+}
+
+.habilidad-img {
+    border: 5% solid #FFFFFF;
+    width: 20%;
+    height: 80%;
+}
+
+.habilidad img {
+    width: 100%;
+    height: 100%;
+}
+
+.habilidad-barra {
+    width: 40%;
+}
+
+.almostfull-bar {
+    width: 75%;
+    background: #66C0F4;
+    padding-left: 2%;
+}
+
+.full-bar {
+    width: 100%;
+    background: #66C0F4;
+    padding-left: 2%;
+}
+
+.half-bar {
+    width: 50%;
+    background: #66C0F4;
+    padding-left: 2%;
+}
+
+.habilidad p {
+    color: #FFFFFF;
+}

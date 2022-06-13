@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Portafolio Personal</title>
   <link href="/styles/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="/styles/sobremi.css" rel="stylesheet" type="text/css" />
   <link href="/styles/proyectos.css" rel="stylesheet" type="text/css" />
   <link href="/styles/habilidades.css" rel="stylesheet" type="text/css" />
   <link href="/styles/pasatiempos.css" rel="stylesheet" type="text/css" />
   <link href="/styles/comentarios.css" rel="stylesheet" type="text/css" />
   <link href="/styles/movil.css" rel="stylesheet" type="text/css" />
-  <link href="/styles/movilproyectos.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
@@ -29,6 +29,9 @@
       <a class="navitem" href="#habilidades">Habilidades</a>
       <a class="navitem" href="#pasatiempos">Pasatiempos</a>
       <a class="navitem" href="#comentarios">Comentarios</a>
+      <a href="javascript:void(0);" class="icon" id="expandButton" onclick="addResponsive()">
+        <i class="fa fa-bars"></i>
+      </a>
   </nav>
 
   <div class="div-content">
@@ -43,7 +46,7 @@
 
       <h2> Quien soy ? </h2>
 
-      <div class="img-block">
+      <div class="sobremi-imgblock">
         <img src="/images/placeholder.png" alt="Foto de presentacion">
       </div>
 
@@ -97,33 +100,33 @@
 
       <h3>Proyectos</h3>
 
-      <section>
-        <article>
+      <div class="proyectos-box">
+        <div class="proyectos-article">
           <img src="/images/placeholder.png" alt="Proyecto">
           <a href="">Ver mas</a>
-        </article>
-      </section>
+        </div class="proyectos-article">
+      </div>
 
-      <section>
-        <article>
+      <div class="proyectos-box">
+        <div class="proyectos-article">
           <img src="/images/placeholder.png" alt="Proyecto">
           <a href="">Ver mas</a>
-        </article>
-      </section>
+        </div class="proyectos-article">
+      </div>
 
-      <section>
-        <article>
+      <div class="proyectos-box">
+        <div class="proyectos-article">
           <img src="/images/placeholder.png" alt="Proyecto">
           <a href="">Ver mas</a>
-        </article>
-      </section>
+        </div class="proyectos-article">
+      </div>
 
-      <section>
-        <article>
+      <div class="proyectos-box">
+        <div class="proyectos-article">
           <img src="/images/placeholder.png" alt="Proyecto">
           <a href="">Ver mas</a>
-        </article>
-      </section>
+        </div class="proyectos-article">
+      </div>
 
     </div>
 
@@ -151,6 +154,19 @@
             <p> 50% </p>
           </div>
         </div>
+
+        <!-- <div class="circle-box">
+          <div class="percent">
+            <div class="circle-container">
+              <div class="circle-1"></div>
+              <div class="fill-50"></div>
+            </div>
+            <div class="number">
+              <h2>50<span>%</span></h2>
+            </div>
+          </div>
+        </div> -->
+
       </div>
 
       <div class="habilidad">
@@ -209,13 +225,52 @@
     =========================================
     -->
 
+    <div id="pasatiempos" class="div-pasatiempos box-main">
+
+      <h3>Pasatiempos</h3>
+
+      <div class="pasatiempos-content">
+
+        <!-- Juego favorito actual, valorant, video y audio -->
+        <div class="pasatiempos-descripcion">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed.</p>
+        </div>
+  
+        <div class="pasatiempos-lista">
+          <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Milk</li>
+            <li>Milk</li>
+          </ul>
+        </div>
+
+        <!-- Lugar favorito Olon, mapa embebido -->
+        <div class="pasatiempos-descripcion">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
+            sit amet ultricies est sagittis sed.</p>
+        </div>
+  
+        <div class="pasatiempos-lista">
+          <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Milk</li>
+            <li>Milk</li>
+          </ul>
+        </div>   
+
+      </div>
 
 
-
-
-
-
-
+    </div>
 
     <!-- 
     =========================================
@@ -226,28 +281,32 @@
     <div id="comentarios" class="div-comentarios box-main">
 
     <h3>Comentarios</h3>
+        <div id="comments" class="div-comentarios">
 
-        <div class="comentario">
-          <h4> User 1 - 26/05/2022 </h4>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed pulvinar ligula, quis ornare justo. 
-            Duis non sollicitudin odio. Proin mattis ipsum hendrerit diam volutpat, id ullamcorper erat sollicitudin. 
-            Phasellus nec purus sollicitudin lectus lobortis sodales. Etiam sit amet felis in quam varius euismod. 
-            Donec in ultrices enim. </p>
-        </div>
-    
-        <div class="comentario">
-          <h4> User 2 - 26/05/2022 </h4>
-          <p> LVestibulum sit amet lobortis ante. 
-            Aliquam blandit ante ut auctor semper. Aliquam quis finibus nunc. 
-            Nulla id velit laoreet, cursus urna a, euismod velit. 
-            Sed non porttitor tortor, eu tincidunt ligula. </p>
+          <div class="comentario">
+            <h4> User 1 - 26/05/2022 </h4>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed pulvinar ligula, quis ornare justo. 
+              Duis non sollicitudin odio. Proin mattis ipsum hendrerit diam volutpat, id ullamcorper erat sollicitudin. 
+              Phasellus nec purus sollicitudin lectus lobortis sodales. Etiam sit amet felis in quam varius euismod. 
+              Donec in ultrices enim. </p>
+          </div>
+      
+          <div class="comentario">
+
+            <h4> User 2 - 26/05/2022 </h4>
+            <p> LVestibulum sit amet lobortis ante. 
+              Aliquam blandit ante ut auctor semper. Aliquam quis finibus nunc. 
+              Nulla id velit laoreet, cursus urna a, euismod velit. 
+              Sed non porttitor tortor, eu tincidunt ligula. </p>
+          </div>
+
         </div>
 
         <div class="div-formulario">
       
-          <form action="">
+          <form id="comment-form" action="">
             <input type="text" id="name" name="name" value="Nombre"><br>
-            <textarea name="message" rows="10" cols="30">Comentario</textarea><br>
+            <textarea id="message" name="message" rows="10" cols="30">Comentario</textarea><br>
             <input type="submit" value="Enviar Comentario">
           </form>
 
@@ -259,17 +318,81 @@
 
   <script>
 
-    window.onscroll = function() {myFunction()};
-    
-    var navbar = document.getElementById("navbar");
+    window.onscroll = () => { 
+      stickNavbar();
+      setPosition(); 
+    };
+
+    const setPosition = () => {
+      var expandButton = document.getElementById("expandButton");
+      expandButton.style.top = window.pageYOffset < sticky ? "92px" : "0px";
+    }
+
     var sticky = navbar.offsetTop;
+    var isClosed = true;
     
-    function myFunction() {
+    const stickNavbar = () => {
+      var navbar = document.getElementById("navbar");
       if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky")
       } else {
         navbar.classList.remove("sticky");
       }
+    }
+
+    const addResponsive = () => {
+      var navbar = document.getElementById("navbar");
+      if (isClosed) {
+        isClosed = false;
+        navbar.classList.add("responsive");
+      } else {
+        isClosed = true;
+        navbar.classList.remove("responsive");
+      }
+    }
+
+    const addComment = (nombre,comentario) => {
+      var comments = document.getElementById("comments");
+
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      let mm = today.getMonth() + 1; // Months start at 0!
+      let dd = today.getDate();
+
+      if (dd < 10) dd = '0' + dd;
+      if (mm < 10) mm = '0' + mm;
+
+      const formattedDate = dd + '/' + mm + '/' + yyyy;
+
+      var commentDiv = document.createElement("div");
+      commentDiv.classList.add('comentario');
+
+      var nameElement = document.createElement("h4");
+      nameElement.innerText = `${nombre} - ${formattedDate}`;
+
+      var commentElement = document.createElement("p");
+      commentElement.innerText = comentario;
+
+      commentDiv.appendChild(nameElement);
+      commentDiv.appendChild(commentElement);
+
+      comments.appendChild(commentDiv);
+    }
+
+    const handleForm = (e) => {
+      if (e.preventDefault) e.preventDefault();
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+      addComment(name, message);
+      return false;
+    }
+    
+    var form = document.getElementById('comment-form');
+
+    if (form.attachEvent) {
+        form.attachEvent("submit", handleForm);
+    } else {
+        form.addEventListener("submit", handleForm);
     }
 
     </script>

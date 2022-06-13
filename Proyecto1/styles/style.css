@@ -22,7 +22,6 @@ html, body {
 
 .box-navbar {
   width: 100%;
-  padding: 0.5em;
 }
 
 .div-content {
@@ -48,11 +47,27 @@ h1 {
 }
 
 .navbar {
-  display: flex; 
-  flex-wrap: wrap;
-  column-gap: 0.7em;
-  align-items: left;
-  background: #2a475e;
+  background-color: #2a475e;
+  overflow: hidden;
+}
+
+.navitem {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar .navitem:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar .icon {
+  display: none;
 }
 
 .sticky {
@@ -65,34 +80,8 @@ h1 {
   padding-top: 60px;
 }
 
-.navitem {
-  text-decoration: none;  
-  color: #c7d5e0;
-}
 
-.navitem:hover {
-  color: #112b40;
-}
 
-aside {
-  display: none;
-  flex-wrap: wrap;
-  flex-direction: column;
-  row-gap: 0.7em;
-  align-items: center;
-  width: 15.6em;
-  color: #c7d5e0;
-}
 
-aside img {
-  display: block;
-  border-radius:  50%;
-  max-width: 35%;
-  height: auto;
-}
 
-aside div {
-  background-color: #1B2838;
-  width: 60%;
-}
 

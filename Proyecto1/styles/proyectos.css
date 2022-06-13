@@ -1,11 +1,11 @@
-article {
+.proyectos-article {
   width: auto;
   padding: 0 auto;
   border-radius: 0.6em;
   margin: 0.3em;
 }
 
-article a {
+.proyectos-article a {
   display: block;
   width: 100%;
   padding: 0.3em 0.3em;
@@ -15,7 +15,7 @@ article a {
   color: #FFFFFF;
 }
 
-article img {
+.proyectos-article img {
   display: block;
   width: 18.8em;
   aspect-ratio: 1 / 1;

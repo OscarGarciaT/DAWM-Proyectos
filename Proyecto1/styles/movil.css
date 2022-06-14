@@ -275,6 +275,19 @@
       border-radius: 0.25rem;
   }
 
+  .pasatiempos-videobox {
+    width: 100%;
+  }
+
+  .half-box {
+    height: 10rem;
+  }
+
+.pasatiempos-mapabox {
+    width: 100%;
+    height: 12.5rem;
+}
+
   /* 
   =========
   COMENTARIOS

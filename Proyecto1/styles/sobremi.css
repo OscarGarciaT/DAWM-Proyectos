@@ -12,8 +12,9 @@
 .div-sobremi img {
     display: block;
     border-radius:  50%;
-    max-width: 35%;
-    height: auto;
+    max-width: 100%;
+    max-height: 15rem;
+    object-fit: fill;
 }
 
 .sobremi-imgblock {
@@ -31,19 +32,21 @@
 }
 
 .descripcion {
-    width: 70%;
+    width: 100%;
     background: #1B2838;
     padding: 0.75rem 1.25rem;
     border: 0.125rem solid #171A21;
     border-radius: 0.25rem;
+    text-shadow: 2px 2px #0c0b0b;
 }
 
 .lista {
-    width: 30%;
+    width: 50%;
     background: #1B2838;
     padding: 0.75rem 1.25rem;
     border: 0.125rem solid #171A21;
     border-radius: 0.25rem;
+    text-shadow: 2px 2px #0c0b0b;
 }
 
 

@@ -1,0 +1,48 @@
+.circle-box {
+    position:relative;
+    width:20%;
+    height:80%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle-box .percent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.circle-box .percent .circle-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.circle-box .percent .circle-1 {
+    border-radius: 50%;
+    width: 100%;
+    padding-bottom: 100%;
+    background: none;
+    border-width: 3;
+    border-style: solid;
+    border-color: aquamarine;
+}
+
+.circle-box .percent .number {
+    position:absolute;
+    top:0;
+    Left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.circle-box .percent .number h2 {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+

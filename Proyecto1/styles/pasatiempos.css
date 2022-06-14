@@ -32,20 +32,40 @@
     width: 70%;
     align-items: flex-start;
     justify-content: center;
+    gap: 1.5rem 0.5rem;
 }
 
 .pasatiempos-descripcion {
-    width: 70%;
+    width: 100%;
     background: #1B2838;
     padding: 0.75rem 1.25rem;
     border: 0.125rem solid #171A21;
     border-radius: 0.25rem;
 }
 
-.pasatiempos-lista {
-    width: 30%;
-    background: #1B2838;
-    padding: 0.75rem 1.25rem;
-    border: 0.125rem solid #171A21;
+.half-box {
+    width: 49%;
+    height: 12.5rem;
+}
+
+.pasatiempos-mapabox {
+    width: 49%;
+    height: 12.5rem;
+}
+
+.pasatiempos-mapa {
+    width: 100%;
+    height: 100%;
+    border: 0;
     border-radius: 0.25rem;
+}
+
+.pasatiempos-videobox {
+    width: 49%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+.pasatiempos-video {
+    max-width: 100%;
+    height: auto;
 }

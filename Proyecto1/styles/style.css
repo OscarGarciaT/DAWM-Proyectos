@@ -72,6 +72,7 @@ h1 {
 
 .sticky {
   position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
 }
@@ -80,8 +81,29 @@ h1 {
   padding-top: 60px;
 }
 
+.fa:hover {
+  opacity: 0.7;
+}
 
+.fa-github {
+  background: #333;
+  color: white;
+}
 
+.fa-instagram {
+  background: #E1306C;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #0A66C2;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
 
 
 

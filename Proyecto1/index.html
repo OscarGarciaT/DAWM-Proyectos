@@ -13,6 +13,7 @@
   <link href="/styles/pasatiempos.css" rel="stylesheet" type="text/css" />
   <link href="/styles/comentarios.css" rel="stylesheet" type="text/css" />
   <link href="/styles/circle.css" rel="stylesheet" type="text/css" />
+  <link href="/styles/sidebar.css" rel="stylesheet" type="text/css" />
   <link href="/styles/movil.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +38,19 @@
 
   <div class="div-content">
 
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="https://github.com/OscarGarciaT/" target="_blank" class="fa fa-github"></a>
+      <a href="https://www.linkedin.com/in/oscargarciat/" target="_blank" class="fa fa-linkedin"></a>
+      <a href="https://www.instagram.com/elwyded/" target="_blank" class="fa fa-instagram"></a>
+      <a href="https://twitter.com/elwoded" target="_blank" class="fa fa-twitter"></a>
+    </div>
+    
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">Socials &#8594;</button>
+    </div>
+
+
       <!-- 
     =========================================
     SOBRE MI 
@@ -48,43 +62,45 @@
       <h2> Quien soy ? </h2>
 
       <div class="sobremi-imgblock">
-        <img src="/images/placeholder.png" alt="Foto de presentacion">
+        <img src="/images/perfil.webp" alt="Foto de presentacion">
       </div>
 
       <div class="sobremi-content">
 
         <div class="descripcion">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed.</p>
+          <p>Hola, mi nombre es <b>Oscar Garcia</b>, tengo un gran gusto por la programacion y esa es la 
+            razon por la cual actualmente soy estudiante de Ingenieria en Computacion en ESPOL, 
+            y he tomado esta oportunidad para hablar un poco sobre mi presentando mi portafolio personal. 
+          </p>
         </div>
   
         <div class="lista">
+          <h3> Lenguajes de programacion que me gustan </h3>
           <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
+            <li>Javascript</li>
+            <li>Java</li>
+            <li>C#</li>
+            <li>Python</li>
           </ul>
         </div>
   
         <div class="lista">
+          <h3> Lenguajes de programacion por aprender </h3>
           <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
+            <li>C</li>
+            <li>Scratch</li>
+            <li>PHP</li>
+            <li>Rust</li>
+
           </ul>
         </div>
   
         <div class="descripcion">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed.</p>
+          <p>Considero que el campo de la Computacion y la programacion es muy amplio en general, por lo que en mi opinion
+             para mi es esencial plantearse objetivos, para mantenerse dentro del camino y motivarse diariamente, mi objetivo
+             personal es convertirme en un desarrollador fullstack, aun me falta decidir que tecnologias quiero utilizar,
+             tengo muchisimo por aprender y un camino largo por recorrer y organizar. 
+          </p>
         </div>
 
       </div>
@@ -147,7 +163,7 @@
         </div>
 
         <p>
-          Habilidad 1
+          Organizacion
         </p>
 
         <div class="habilidad-barra">
@@ -176,7 +192,7 @@
         </div>
 
         <p>
-          Habilidad 2
+          Comunicacion
         </p>
 
         <div class="habilidad-barra">
@@ -192,7 +208,7 @@
         </div>
 
         <p>
-          Habilidad 3
+          Liderazgo
         </p>
 
         <div class="habilidad-barra">
@@ -208,7 +224,7 @@
         </div>
 
         <p>
-          Habilidad 4
+          Flexibilidad
         </p>
 
         <div class="habilidad-barra">
@@ -234,38 +250,43 @@
 
         <!-- Juego favorito actual, valorant, video y audio -->
         <div class="pasatiempos-descripcion">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed.</p>
+          <p>
+            Una de mis grandes pasiones es jugar videojuegos, de todo tipo, es algo que llevo haciendo desde
+            muy pequeño, por lo que en todos estos años he desarrollado mis preferencias, y esos son los shooters,
+            mi genero de videojuegos preferido. Ultimamente el shooter que mas juego es <b>VALORANT</b>, un fps tactico y competitivo,
+            recientemente llegué al top 0.5% en la clasificacion de jugadores, y espero llegar mas lejos. Ademas, hay veces en las que
+            hago videos, a continuacion dos videos mios, uno de <b>VALORANT</b> y otro de <b>osu!</b> un juego ritmico que tambien tiene un lugar en 
+            mi corazon.
+          </p>
         </div>
-  
-        <div class="pasatiempos-lista">
-          <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-          </ul>
+
+        <div class="pasatiempos-videobox">
+          <video class="pasatiempos-video" controls>
+            <source src="video/valo.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="pasatiempos-videobox">
+          <video class="pasatiempos-video" controls>
+            <source src="video/osu.mp4" type="video/mp4">
+          </video>
         </div>
 
         <!-- Lugar favorito Olon, mapa embebido -->
-        <div class="pasatiempos-descripcion">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at lacus nulla. Praesent viverra lacinia sem, 
-            sit amet ultricies est sagittis sed.</p>
+        <div class="pasatiempos-descripcion half-box">
+          <p>Me considero una persona de casa por el hecho de que no me gusta salir mucho, 
+            pero hay un lugar al que me gusta ir siempre que se presenta la oportunidad, 
+            ese lugar se llama Olon, es una playa situada a unos minutos de Montañita, 
+            el pueblo y su gente son amables, tranquilo por las mañanas y tardes, bastante
+            movido en las noches.
+          </p>
         </div>
   
-        <div class="pasatiempos-lista">
-          <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-            <li>Milk</li>
-            <li>Milk</li>
-          </ul>
+        <div class="pasatiempos-mapabox half-box">
+          <iframe class="pasatiempos-mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15951.420723435178!2d-80.76917667383582!3d-1.7974402318095406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902c2b2f567387a1%3A0xd3bd8f036750f07d!2sOl%C3%B3n%20Ecuador!5e0!3m2!1ses-419!2sec!4v1655182231301!5m2!1ses-419!2sec"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>   
 
       </div>
@@ -394,6 +415,17 @@
         form.attachEvent("submit", handleForm);
     } else {
         form.addEventListener("submit", handleForm);
+    }
+
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "150px";
+      document.getElementById("main").style.marginLeft = "150px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
     }
 
     </script>

@@ -3,6 +3,7 @@
   padding: 0 auto;
   border-radius: 0.6em;
   margin: 0.3em;
+  box-shadow: 0.5em 0.5em 0.5em #000000;
 }
 
 .proyectos-article a {

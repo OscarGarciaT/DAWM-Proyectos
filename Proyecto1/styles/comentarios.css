@@ -11,7 +11,7 @@
 .div-comentarios h3 {
     width: 100%;
     color: #FFFFFF;
-  }
+}
 
 .comentario {
     display: flex;
@@ -23,6 +23,7 @@
     padding-right: 3%;
     padding-left: 1%;
     color: #FFFFFF;
+    box-shadow: 0.5em 0.5em 0.5em #000000;
 }
 
 .div-formulario {
@@ -62,7 +63,7 @@ input[type=submit] {
     cursor: pointer;
     float: right;
 }
-  
+
 input[type=submit]:hover {
-background-color: #152630;
+    background-color: #152630;
 }

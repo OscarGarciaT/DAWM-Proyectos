@@ -65,10 +65,8 @@
 .pasatiempos-videobox {
     width: 49%;
     box-shadow: 0.5em 0.5em 0.5em #000000;
-    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
-/* Then style the iframe to fit in the container div with full height and width */
 .pasatiempos-video {
     max-width: 100%;
     height: auto;

@@ -115,34 +115,26 @@
 
     <div id="proyectos" class="div-proyectos box-main">
 
-      <h3>Proyectos</h3>
+      <h3>Proyectos que me interesan</h3>
 
-      <div class="proyectos-box">
-        <div class="proyectos-article">
-          <img src="/images/placeholder.png" alt="Proyecto">
-          <a href="">Ver mas</a>
-        </div class="proyectos-article">
+      <div class="proyectos-box grow">
+          <img src="/images/tachiyomi.jfif" alt="Tachiyomi manga reader">
+          <a href="https://github.com/tachiyomiorg/tachiyomi" target="_blank">Ver mas</a>
       </div>
 
-      <div class="proyectos-box">
-        <div class="proyectos-article">
-          <img src="/images/placeholder.png" alt="Proyecto">
-          <a href="">Ver mas</a>
-        </div class="proyectos-article">
+      <div class="proyectos-box grow">
+          <img src="/images/ryujinx.jpg" alt="Ryujinx, nintendo switch emulator">
+          <a href="https://github.com/Ryujinx/Ryujinx" target="_blank">Ver mas</a>
       </div>
 
-      <div class="proyectos-box">
-        <div class="proyectos-article">
-          <img src="/images/placeholder.png" alt="Proyecto">
-          <a href="">Ver mas</a>
-        </div class="proyectos-article">
+      <div class="proyectos-box grow">
+          <img src="/images/dolphin.png" alt="Dolphin, nintendo wii and gamecube emulator">
+          <a href="https://github.com/dolphin-emu/dolphin" target="_blank">Ver mas</a>
       </div>
 
-      <div class="proyectos-box">
-        <div class="proyectos-article">
-          <img src="/images/placeholder.png" alt="Proyecto">
-          <a href="">Ver mas</a>
-        </div class="proyectos-article">
+      <div class="proyectos-box grow">
+          <img src="/images/pcsx2.png" alt="PCSX2, ps2 emulator">
+          <a href="https://github.com/PCSX2/pcsx2" target="_blank">Ver mas</a>
       </div>
 
     </div>
@@ -255,72 +247,6 @@
         </table>
       </div>
 
-
-      <!-- <div class="habilidad">
-        <div class="habilidad-img">
-          <img src="images/comunicacion.svg">
-        </div>
-
-        <p>
-          Organizacion
-        </p>
-
-        <div class="habilidad-barra">
-          <div class="half-bar">
-            <p> 50% </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="habilidad">
-        <div class="habilidad-img">
-          <img src="images/comunicacion.svg">
-        </div>
-
-        <p>
-          Comunicacion
-        </p>
-
-        <div class="habilidad-barra">
-          <div class="almostfull-bar">
-            <p> 75% </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="habilidad">
-        <div class="habilidad-img">
-          <img src="images/comunicacion.svg">
-        </div>
-
-        <p>
-          Liderazgo
-        </p>
-
-        <div class="habilidad-barra">
-          <div class="half-bar">
-            <p> 50% </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="habilidad">
-        <div class="habilidad-img">
-          <img src="images/comunicacion.svg">
-        </div>
-
-        <p>
-          Flexibilidad
-        </p>
-
-        <div class="habilidad-barra">
-          <div class="full-bar">
-            <p> 100% </p>
-          </div>
-        </div>
-      </div> -->
-
     </div>
 
     <!-- 
@@ -335,7 +261,6 @@
 
       <div class="pasatiempos-content">
 
-        <!-- Juego favorito actual, valorant, video y audio -->
         <div class="pasatiempos-descripcion">
           <p>
             Una de mis grandes pasiones es jugar videojuegos, de todo tipo, es algo que llevo haciendo desde
@@ -359,7 +284,6 @@
           </video>
         </div>
 
-        <!-- Lugar favorito Olon, mapa embebido -->
         <div class="pasatiempos-descripcion half-box">
           <p>Me considero una persona de casa por el hecho de que no me gusta salir mucho, 
             pero hay un lugar al que me gusta ir siempre que se presenta la oportunidad, 
@@ -389,7 +313,7 @@
 
     <div id="comentarios" class="div-comentarios box-main">
 
-    <h3>Comentarios</h3>
+      <h3>Comentarios</h3>
         <div id="comments" class="div-comentarios">
 
           <div class="comentario">
@@ -465,7 +389,7 @@
 
       const today = new Date();
       const yyyy = today.getFullYear();
-      let mm = today.getMonth() + 1; // Months start at 0!
+      let mm = today.getMonth() + 1;
       let dd = today.getDate();
 
       if (dd < 10) dd = '0' + dd;
@@ -509,7 +433,6 @@
       document.getElementById("main").style.marginLeft = "150px";
     }
 
-    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
     function closeNav() {
       document.getElementById("mySidebar").style.width = "0";
       document.getElementById("main").style.marginLeft = "0";

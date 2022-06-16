@@ -1,12 +1,9 @@
-.proyectos-article {
-  width: auto;
-  padding: 0 auto;
-  border-radius: 0.6em;
-  margin: 0.3em;
+.proyectos-box {
+  width: 20%;
   box-shadow: 0.5em 0.5em 0.5em #000000;
 }
 
-.proyectos-article a {
+.proyectos-box a {
   display: block;
   width: 100%;
   padding: 0.3em 0.3em;
@@ -16,10 +13,14 @@
   color: #FFFFFF;
 }
 
-.proyectos-article img {
+.proyectos-box a:hover {
+  color: black;
+}
+
+.proyectos-box img {
   display: block;
-  width: 18.8em;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
 }
 
 .div-proyectos {
@@ -34,4 +35,12 @@
 .div-proyectos h3 {
   width: 100%;
   color: #FFFFFF;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
 }

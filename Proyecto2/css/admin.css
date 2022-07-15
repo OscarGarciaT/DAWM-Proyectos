@@ -1,5 +1,24 @@
 body {
-  background-color: #fbfbfb;
+  background-color: #140D0D;
+}
+
+.card {
+  background-color: #473535;
+  color: #6c757d;
+}
+
+.navbar {
+  background-color: #D3A089;
+}
+
+.page-title {
+  font-family: 'Cinzel', serif;
+}
+
+.character-table {
+  max-height: 22.5rem;
+  overflow: auto;
+  display:inline-block;
 }
 
 @media (min-width: 991.98px) {

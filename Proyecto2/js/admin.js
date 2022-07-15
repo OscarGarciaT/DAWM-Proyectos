@@ -25,13 +25,16 @@ const fetchGenshinFood = async () => {
         labels: foodTypes,
         datasets: [
           {
-            label: 'Different dishes',
+            // label: 'Different dishes',
             data: foodData,
             backgroundColor: ["red","green","orange","blue"],
           },
         ],
       },
       options: {
+        legend:{
+          display: false,
+        },
         scales: {
             xAxes: [{
                 ticks: {
@@ -41,25 +44,19 @@ const fetchGenshinFood = async () => {
         }
       }
     });
-
   } catch (err) {
     console.error(err)
   }     
 }
 
 const buildWeaponChart = (characters) => {
-  
   let weaponTypes = characters.map( character => character.weapon ).filter( (value, index, self) => self.indexOf(value) === index )
-
   let weaponData = []
-
   weaponTypes.forEach(element => {
       let weapons = characters.filter( c => c.weapon == element )
       weaponData.push(weapons.length)
   });
-
   var chartElement = document.getElementById("weaponChart");
-
   var weaponChart = new Chart(chartElement, {
     type: "pie",
     data: {
@@ -78,30 +75,48 @@ const buildWeaponChart = (characters) => {
       }]
     },
   });
-
 }
 
 
 const fetchCharacters = async () => {
   let characterResponse = await fetch("https://api.genshin.dev/characters/")
   let characters = Object.values(await characterResponse.json())
-
   const promises = [];
-
-  
   characters.forEach(character => {
     const promise = fetch(`https://api.genshin.dev/characters/${character}`)
                       .then(response => response.json())
                       .then(data => allCharacters.push(data))
     promises.push(promise)
   });
-
   Promise.all(promises).then( res => {
     console.log(res);
     console.log(allCharacters)
     buildWeaponChart(allCharacters)
+    fetchTypes(allCharacters);
+    fillCharacterTable(allCharacters)
   })
+}
 
+const fillCharacterTable = (charactersArray) => {
+  var table = document.querySelector('#characterTable tbody')
+  charactersArray.forEach( (c,index) => {
+    table.innerHTML += 
+    `
+    <th scope="row">${index + 1}</th>
+    <td>${c.name}</td>
+    <td>${c.nation}</td>
+    <td>${c.weapon}</td>
+    <td>${c.vision}</td>
+    <td>${c.rarity}</td>
+    <td>${c.description == "" ? "No Description" : c.description}</td>
+    `
+  })
+}
+
+const fetchTypes = (charactersArray) => {
+  charactersArray.forEach( (c) => {
+    document.getElementById(c.vision).textContent = Number(document.getElementById(c.vision).textContent) + 1
+  })
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {

@@ -10,3 +10,4 @@ Este repositorio contiene los proyectos realizados en la materia Desarrollo de A
 | Carpeta del Proyecto  | Descripcion del Proyecto |
 | ------------- | ------------- |
 | [Proyecto 1](https://github.com/OscarGarciaT/DAWM-Proyectos/tree/master/Proyecto1)  | Portafolio personal (html,css)  |
+| [Proyecto 2](https://github.com/OscarGarciaT/DAWM-Proyectos/tree/master/Proyecto2)  | Genshin Dashboard (html,css,js)  |

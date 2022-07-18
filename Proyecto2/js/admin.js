@@ -99,6 +99,20 @@ const fetchCharacters = async () => {
   })
 }
 
+const fetchNations = async () => {
+  let nationResponse = await fetch("https://api.genshin.dev/nations/")
+  let nations = Object.values(await nationResponse.json())
+  var nationsLabel = document.getElementById('nationsLabel')
+  nationsLabel.textContent = nations.length
+}
+
+const fetchEnemies = async () => {
+  let enemieResponse = await fetch("https://api.genshin.dev/enemies/")
+  let enemies = Object.values(await enemieResponse.json())
+  var enemiesLabel = document.getElementById('enemiesLabel')
+  enemiesLabel.textContent = enemies.length
+}
+
 const fillCharacterTable = (charactersArray) => {
   var table = document.querySelector('#characterTable tbody')
 
@@ -232,4 +246,6 @@ const fetchTypes = (charactersArray) => {
 window.addEventListener('DOMContentLoaded', (event) => {
   fetchGenshinFood();
   fetchCharacters();
+  fetchEnemies();
+  fetchNations();
 });

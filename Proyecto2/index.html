@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/mdb.min.css" />
   <!-- Custom styles -->
   <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="css/movil.css" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
@@ -62,10 +63,9 @@
   <main style="margin-top: 58px">
 
     <div class="container-fluid pt-4">
-
       <div class="row">
         <!-- Section: Food chart -->
-        <section class="mb-4 col-sm-6 col-12">
+        <section class="mb-4 col-xl-6 col-sm-12">
           <div class="card">
             <div class="card-header py-3">
               <h5 class="mb-0 text-center"><strong>Genshin Impact: # of dishes by type</strong></h5>
@@ -78,7 +78,7 @@
         <!-- Section: Food chart -->
   
         <!-- Section: Weapon Type chart -->
-        <section class="mb-4 col-sm-6 col-12">
+        <section class="mb-4 col-xl-6 col-sm-12">
           <div class="card">
             <div class="card-header py-3">
               <h5 class="mb-0 text-center"><strong>Genshin Impact: # Characters by Weapon Type</strong></h5>
@@ -94,37 +94,37 @@
       <form class="contact_form mb-4" action="">
         <div class="row">
             <!-- Input -->
-            <div class="col-3 mt-2 mb-6">
+            <div class="col-sm-12 col-md-3 mt-2 mb-6">
                 <div class="form-group">
                     <div class="input-group">
-                        <select name="select" class="custom-select custom-select-lg form-control " required="">
+                        <select name="select" id="nationSelect" class="custom-select custom-select-lg form-control " required="">
                           <option value="-1" selected="">Filter by Nation</option>
                         </select>
                     </div>
                 </div>
             </div>
-            <div class="col-3 mt-2 mb-6">
+            <div class="col-sm-12 col-md-3 mt-2 mb-6">
                 <div class="form-group">
                     <div class="input-group">
-                        <select name="select" class="custom-select custom-select-lg form-control " required="">
+                        <select name="select" id="weaponSelect" class="custom-select custom-select-lg form-control " required="">
                           <option value="-1" selected="">Filter by Weapon</option>
                         </select>
                     </div>
                 </div>
             </div>
-            <div class="col-3 mt-2 mb-6">
+            <div class="col-sm-12 col-md-3 mt-2 mb-6">
                 <div class="form-group">
                     <div class="input-group">
-                        <select name="select" class="custom-select custom-select-lg form-control " required="">
+                        <select name="select" id="visionSelect" class="custom-select custom-select-lg form-control " required="">
                           <option value="-1" selected="">Filter by Vision</option>
                         </select>
                     </div>
                 </div>
             </div>
-            <div class="col-3 mt-2 mb-6">
+            <div class="col-sm-12 col-md-3 mt-2 mb-6">
                 <div class="form-group">
                     <div class="input-group">
-                        <select name="select" class="custom-select custom-select-lg form-control " required="">
+                        <select name="select" id="raritySelect" class="custom-select custom-select-lg form-control " required="">
                           <option value="-1" selected="">Filter by Rarity</option>
                         </select>
                     </div>
@@ -133,25 +133,23 @@
         </div>
       </form>
 
-      <section class="character-table mb-4">
+      <section class="table-responsive mb-4">
+          <table class="table table-dark table-hover text-nowrap" id="characterTable">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Nation</th>
+                <th scope="col">Weapon</th>
+                <th scope="col">Vision</th>
+                <th scope="col">Rarity</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody> 
 
-        <table class="table table-dark table-hover" id="characterTable">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Nation</th>
-              <th scope="col">Weapon</th>
-              <th scope="col">Vision</th>
-              <th scope="col">Rarity</th>
-              <th scope="col">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-              
-          </tbody>
-        </table>
-
+            </tbody>
+          </table>
       </section>
 
 
@@ -232,8 +230,8 @@
               <div class="card-body">
                 <div class="d-flex justify-content-between px-md-1">
                   <div>
-                    <h3 class="text-danger"> 0 </h3>
-                    <p class="mb-0">New Projects</p>
+                    <h3 class="text-danger" id="enemiesLabel"> 0 </h3>
+                    <p class="mb-0">Different Enemies</p>
                   </div>
                   <div class="align-self-center">
                     <i class="fas fa-rocket text-danger fa-3x"></i>
@@ -280,8 +278,8 @@
               <div class="card-body">
                 <div class="d-flex justify-content-between px-md-1">
                   <div>
-                    <h3 class="text-info"> 0 </h3>
-                    <p class="mb-0">Support Tickets</p>
+                    <h3 class="text-info" id="nationsLabel"> 0 </h3>
+                    <p class="mb-0">Playable Nations</p>
                   </div>
                   <div class="align-self-center">
                     <i class="far fa-life-ring text-info fa-3x"></i>

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+.container {
+	background: #3D0814;
+}
+
+.full {
+	min-height: 100vh;
+}
+
+.titulo {
+	font-family: 'Poiret One', cursive;
+}
+
+.slogan {
+	font-family: 'Poiret One', cursive;
+}
+
+.v-align {
+	padding: 30vh 0;
+}

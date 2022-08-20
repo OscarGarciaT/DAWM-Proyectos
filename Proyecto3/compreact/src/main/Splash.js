@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
-    height: "100vh",
+    minHeight: "100vh",
+    margin: 0,
   },
   slogan: {
     fontSize: 18,
@@ -27,7 +28,7 @@ const Splash = (props) => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: "100vh", margin: 0 }}
+      className={classes.root}
       spacing={6}
       xs={12}
     >

@@ -5,14 +5,19 @@ import {
   Toolbar,
   Typography,
   Grid,
-  Chip,
+  Box,
+  Card,
+  CardActionArea,
+  CardMedia,
+  CardContent,
 } from "@material-ui/core";
-import React from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import axios from "axios";
+import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -26,9 +31,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "30px",
     paddingLeft: "15px",
     paddingRight: "15px",
+    marginBottom: "15px",
   },
   title: {
     color: "white",
+    fontWeight: 500,
   },
   tags: {
     color: "white",
@@ -37,9 +44,26 @@ const useStyles = makeStyles((theme) => ({
   description: {
     color: "white",
     fontSize: 13,
+    fontWeight: 100,
   },
   chip: {
     minWidth: 200,
+  },
+  box: {
+    display: "flex",
+    background: "#24050C",
+    height: "25vh",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    overflowX: "auto",
+    paddingLeft: 15,
+    paddingBottom: 10,
+    paddingTop: 10,
+  },
+  card: {
+    minWidth: "40vw",
+    marginRight: 10,
   },
 }));
 
@@ -48,11 +72,27 @@ const Game = () => {
   const params = useParams();
   const navigate = useNavigate();
 
-  console.log(params);
   const imgUrl = "https://i.ibb.co/dWdJ3HK/valorant.png";
 
+  const [game, setGame] = useState(null);
+
+  useEffect(() => {
+    const getGame = async () => {
+      const response = await axios.get(
+        `http://localhost:3000/explorar/juegos/${params.id}`
+      );
+      setGame(response.data.pop());
+    };
+
+    getGame();
+  }, []);
+
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <AppBar position="static" style={{ background: "#24050C" }}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -83,7 +123,7 @@ const Game = () => {
           xs={10}
           alignContent="center"
           justifyContent="center"
-          spacing={5}
+          spacing={3}
         >
           <Grid item>
             <img
@@ -93,7 +133,7 @@ const Game = () => {
           </Grid>
           <Grid item container xs={12} justifyContent="center">
             <Typography variant="h4" align="center" className={classes.title}>
-              VALORANT
+              {game?.nombre}
             </Typography>
             <Grid item container spacing={1}>
               <Grid item xs={6}>
@@ -102,16 +142,16 @@ const Game = () => {
                   align="right"
                   className={classes.tags}
                 >
-                  Tactical Shooter
+                  {game?.genero}
                 </Typography>
               </Grid>
               <Grid item xs={6}>
                 <Typography
                   variant="body1"
-                  align="center"
+                  align="left"
                   className={classes.tags}
                 >
-                  PC
+                  {game?.plataforma}
                 </Typography>
               </Grid>
             </Grid>
@@ -122,26 +162,65 @@ const Game = () => {
               align="center"
               className={classes.description}
             >
-              VALORANT es un shooter táctico 5v5 basado en personajes que está
-              ambientado en un escenario internacional. Sed más listos que
-              vuestros oponentes, superadlos con grandes jugadas y eclipsadlos
-              con habilidades tácticas, armas precisas y trabajo en equipo
-              adaptable.
+              {game?.descripcion}
             </Typography>
-          </Grid>
-          <Grid item xs={12} style={{ textAlign: "center" }}>
-            <Chip
-              clickable
-              color="primary"
-              label="Equipos"
-              className={classes.chip}
-              icon={<ArrowForwardIcon />}
-              onClick={() => console.log("click")}
-            />
           </Grid>
         </Grid>
       </Grid>
-    </>
+      <Typography
+        variant="h4"
+        style={{
+          color: "white",
+          marginTop: 35,
+          marginLeft: 20,
+          marginBottom: 5,
+        }}
+      >
+        Equipos
+      </Typography>
+      <Box className={classes.box}>
+        <Card className={classes.card}>
+          <CardActionArea onClick={() => console.log("click")}>
+            <CardMedia component="img" height="140" image={imgUrl} />
+            <CardContent>
+              <Typography variant="body2">{game?.nombre}</Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card className={classes.card}>
+          <CardActionArea onClick={() => console.log("click")}>
+            <CardMedia component="img" height="140" image={imgUrl} />
+            <CardContent>
+              <Typography variant="body2">{game?.nombre}</Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card className={classes.card}>
+          <CardActionArea onClick={() => console.log("click")}>
+            <CardMedia component="img" height="140" image={imgUrl} />
+            <CardContent>
+              <Typography variant="body2">{game?.nombre}</Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card className={classes.card}>
+          <CardActionArea onClick={() => console.log("click")}>
+            <CardMedia component="img" height="140" image={imgUrl} />
+            <CardContent>
+              <Typography variant="body2">{game?.nombre}</Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+        <Card className={classes.card}>
+          <CardActionArea onClick={() => console.log("click")}>
+            <CardMedia component="img" height="140" image={imgUrl} />
+            <CardContent>
+              <Typography variant="body2">{game?.nombre}</Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </Box>
+    </motion.div>
   );
 };
 

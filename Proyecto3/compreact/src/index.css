@@ -1,0 +1,15 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: #3d0814;
+}

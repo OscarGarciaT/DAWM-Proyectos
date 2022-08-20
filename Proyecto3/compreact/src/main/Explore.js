@@ -15,7 +15,11 @@ import StarIcon from "@material-ui/icons/Star";
 import { useEffect, useState } from "react";
 
 import FavoritosGrid from "./ExploreGrids/FavoritosGrid";
-import JuegosGrid from "./ExploreGrids/JuegosGrid";
+import MainGrid from "./ExploreGrids/MainGrid";
+import axios from "axios";
+import MockFavoritos from "./ExploreGrids/MockFavoritos";
+
+import { motion } from "framer-motion";
 
 const useStyles = makeStyles({
   stickToBottom: {
@@ -42,62 +46,45 @@ const navStyles = makeStyles({
       color: "#134074",
     },
   },
+  selected: {},
 });
-
-const getJuegos = () => {
-  return {
-    1: {
-      id: 1,
-      name: "VALORANT",
-      imgUrl: "https://i.ibb.co/dWdJ3HK/valorant.png",
-    },
-    2: {
-      id: 2,
-      name: "VALORANT",
-      imgUrl: "https://i.ibb.co/dWdJ3HK/valorant.png",
-    },
-    3: {
-      id: 3,
-      name: "VALORANT",
-      imgUrl: "https://i.ibb.co/dWdJ3HK/valorant.png",
-    },
-    4: {
-      id: 4,
-      name: "VALORANT",
-      imgUrl: "https://i.ibb.co/dWdJ3HK/valorant.png",
-    },
-    5: {
-      id: 5,
-      name: "VALORANT",
-      imgUrl: "https://i.ibb.co/dWdJ3HK/valorant.png",
-    },
-    6: {
-      id: 6,
-      name: "VALORANT",
-      imgUrl: "https://i.ibb.co/dWdJ3HK/valorant.png",
-    },
-    7: {
-      id: 7,
-      name: "VALORANT",
-      imgUrl: "https://i.ibb.co/dWdJ3HK/valorant.png",
-    },
-  };
-};
 
 const Explore = () => {
   const [value, setValue] = useState(0);
   const classes = useStyles();
   const navClasses = navStyles();
-  const [data, setData] = useState(null);
+  const [model, setModel] = useState({ current: "juegos", data: null });
 
   useEffect(() => {
-    if (!value) {
-      setData(getJuegos());
+    const getJuegos = async () => {
+      const juegosResponse = await axios.get(
+        "http://localhost:3000/explorar/juegos"
+      );
+      setModel({ current: "juegos", data: juegosResponse.data });
+    };
+
+    const getEquipos = async () => {
+      const equiposResponse = await axios.get(
+        "http://localhost:3000/explorar/equipos"
+      );
+      setModel({ current: "equipos", data: equiposResponse.data });
+    };
+
+    const getFavoritos = async () => {};
+
+    if (model?.current == "juegos") {
+      getJuegos();
+    } else if (model?.current == "equipos") {
+      getEquipos();
     }
-  }, [value]);
+  }, [model.current]);
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <AppBar position="static" style={{ background: "#24050C" }}>
         <Toolbar>
           <Grid
@@ -117,32 +104,30 @@ const Explore = () => {
               <Grid item xs={2}>
                 <Chip
                   clickable
-                  color="primary"
+                  color={model.current === "juegos" ? "secondary" : "primary"}
                   label="Juegos"
-                  onClick={() => console.log("click")}
+                  onClick={() => setModel({ ...model, current: "juegos" })}
                 />
               </Grid>
               <Grid item xs={1} />
               <Grid item xs={2}>
                 <Chip
                   clickable
-                  color="primary"
+                  color={model.current === "equipos" ? "secondary" : "primary"}
                   label="Equipos"
-                  onClick={() => console.log("click")}
+                  onClick={() => setModel({ ...model, current: "equipos" })}
                 />
               </Grid>
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
-      {data ? (
-        !!value ? (
-          <FavoritosGrid classes={classes} data={data} />
-        ) : (
-          <JuegosGrid classes={classes} data={data} />
-        )
-      ) : (
+      {!model?.data ? (
         <CircularProgress />
+      ) : !value ? (
+        <MainGrid classes={classes} data={model.data} show={model.current} />
+      ) : (
+        <FavoritosGrid classes={classes} data={MockFavoritos(model.current)} />
       )}
       <BottomNavigation
         showLabels
@@ -164,7 +149,7 @@ const Explore = () => {
           icon={<StarIcon />}
         />
       </BottomNavigation>
-    </>
+    </motion.div>
   );
 };
 

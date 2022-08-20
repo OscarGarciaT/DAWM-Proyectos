@@ -1,0 +1,34 @@
+{
+  "model": {
+    "type": "Object",
+    "value": {
+      "id": {
+        "type": "incrementNumber",
+        "options": {
+          "from": 51
+        }
+      },
+      "nombre": {
+        "type": "faker",
+        "value": "random.words"
+      },
+      "genero": {
+        "type": "faker",
+        "value": "random.words"
+      },
+      "plataforma": {
+        "type": "faker",
+        "value": "random.words"
+      },
+      "descripcion": {
+        "type": "faker",
+        "value": "random.words"
+      },
+      "fechaLanzamiento": {
+        "type": "faker",
+        "value": "date.between",
+        "options": ["2017-01-02", "2022-07-15"]
+      }
+    }
+  }
+}

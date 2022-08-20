@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "framer-motion": "^7.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
@@ -16,7 +17,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "PORT=4200 react-scripts start",
+    "start": "PORT=4200 BROWSER='google chrome' BROWSER_ARGS='--remote-debugging-port=9222' react-scripts start",
     "build": "PORT=4200 react-scripts build",
     "test": "PORT=4200 react-scripts test",
     "eject": "PORT=4200 react-scripts eject"

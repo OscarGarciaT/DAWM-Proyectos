@@ -42,7 +42,7 @@ router.get("/equipos/:id", function (req, res, next) {
     .catch((error) => res.status(400).send(error));
 });
 
-router.get("/jugador/:id", function (req, res, next) {
+router.get("/jugadores/:id", function (req, res, next) {
   let id = req.params.id;
 
   models.Jugadores.findAll({ where: { id_jugador: id } })
@@ -52,9 +52,28 @@ router.get("/jugador/:id", function (req, res, next) {
     .catch((error) => res.status(400).send(error));
 });
 
+router.get("/jugadores", function (req, res, next) {
+  const id_roster = +req.query.id_roster;
+
+  models.Jugadores.findAll({ where: { roster: id_roster } })
+    .then((Jugador) => {
+      res.json(Jugador);
+    })
+    .catch((error) => res.status(400).send(error));
+});
+
 router.get("/roster", function (req, res, next) {
   const id_equipo = +req.query.id_equipo;
   models.Rosters.findAll({ where: { id_equipo: id_equipo } })
+    .then((Roster) => {
+      res.json(Roster);
+    })
+    .catch((error) => res.status(400).send(error));
+});
+
+router.get("/roster/:id", function (req, res, next) {
+  let id = req.params.id;
+  models.Rosters.findAll({ where: { id_roster: id } })
     .then((Roster) => {
       res.json(Roster);
     })
